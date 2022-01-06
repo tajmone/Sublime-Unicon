@@ -1,0 +1,6 @@
+#! SYNTAX TEST "Packages/Unicon/Unicon.sublime-syntax"
+
+   $define XXX 1
+#! ^               punctuation.definition.comment
+#! ^^^^^^^^^^^^^   meta.preprocessor
+#! ^^^^^^^^^^^^^   comment.line.dollar

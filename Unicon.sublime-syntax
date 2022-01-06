@@ -1,0 +1,122 @@
+%YAML 1.2
+---
+# Sublime Unicon 1.0.0 | 2022/01/06 | ST 4125 Dev | Unicon 13.2
+# ==============================================================================
+# Unicon syntax definition for Sublime Text 4, by Tristano Ajmone, MIT License:
+#   https://github.com/tajmone/Sublime-Unicon
+#
+# Based on the "unicon.sublime-syntax" file from the Unicon repository, with
+# permission from the original author(s):
+#   https://github.com/uniconproject/unicon/issues/261
+#
+# The Unicon programming language:
+#   http://unicon.org
+# ==============================================================================
+name: Unicon
+file_extensions:
+  - icn
+scope: source.icn
+version: 2
+
+contexts:
+  prototype:
+    - include: comments
+
+  main:
+    - include: reserved
+    - include: keywords
+    - include: preprocessor
+    - include: numbers
+    - include: strings
+    - include: charsets
+    - include: operators
+
+  reserved:
+    - match: '(?x)\b(
+          abstract|all|break|by|case|class|create|critical|
+          default|do|else|end|every|fail|global|if|import|initial|initially|invocable|
+          link|local|method|next|not|of|package|procedure|record|repeat|return|
+          static|suspend|then|thread|to|type||until|while|write
+        )\b'
+      scope: keyword.control.unicon
+
+  keywords:
+    - match: '(?x)(&)(
+          allocated|ascii|clock|col|collections|column|control|cset|current|
+          date|dateline|digits|dump|
+          errno|error|errornumber|errortext|errorvalue|errout|eventcode|eventsource|eventvalue|e|
+          fail|features|file|host|input|interval|
+          lcase|ldrag|letters|level|line|lpress|lrelease|
+          main|mdrag|meta|mpress|mrelease|now|null|output|
+          phi|pi|pick|pos|progname|random|rdrag|regions|resize|row|rpress|rrelease|
+          shift|source|storage|subject|time|trace|ucase|version|window|x|y
+        )\b'
+      scope: keyword.control.unicon
+      captures:
+        1: punctuation.definition.keyword.unicon
+
+  # @FIXME: Use proper scoping of preprocessor directives!
+  preprocessor:
+    - match: '\$'
+      scope: punctuation.definition.comment.unicon
+      push:
+        # @NOTE: Scoped as 'dollar' to distinguish it from real comments!
+        - meta_scope: meta.preprocessor.unicon comment.line.dollar.unicon
+        - match: $\n?
+          pop: true
+
+  operators:
+    - match: '\b::|\:\=|\?\?|\?|!|\*|\/|%|\+|-|\^|\\|\.|=|\|\?|@|\|\|\||\?\?|\$\b'
+      scope: keyword.operator.unicon
+
+  numbers:
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric.unicon
+
+  escapes:
+    # Hex escapes are case insensitive.
+    # @NOTE: Control escapes currently match any lowercase char after \^
+    #        Is this correct?
+    # @NOTE: Any remaining char after \ is matched as an escape
+    #        Is this correct?
+    #        Is \' actually supported inside double quoted strings?
+    #        Is \" actually supported inside character sets?
+    - match: '\\(x[0-9a-fA-F]{2}|[0-7]{3}|\^[a-z]|.)'
+      scope: constant.character.escape.unicon
+
+  strings:
+    # Strings begin and end with double quotes,
+    # and use backslashes as an escape character.
+    - match: '"'
+      scope: punctuation.definition.string.begin.unicon
+      push: strings_inside
+  strings_inside:
+    - meta_include_prototype: false
+    - meta_scope: string.quoted.double.unicon
+    - include: escapes
+    - match: '"'
+      scope: punctuation.definition.string.end.unicon
+      pop: true
+
+  charsets:
+    # Character sets begin and end with single quotes,
+    # and use backslashes as an escape character.
+    - match: ''''
+      scope: punctuation.definition.string.begin.unicon
+      push: charsets_inside
+  charsets_inside:
+    - meta_include_prototype: false
+    - meta_scope: string.quoted.single.unicon
+    - include: escapes
+    - match: ''''
+      scope: punctuation.definition.string.end.unicon
+      pop: true
+
+  comments:
+    # Comments begin with a '#' and finish at the end of the line.
+    - match: '#'
+      scope: punctuation.definition.comment.unicon
+      push:
+        - meta_scope: comment.line.number-sign.unicon
+        - match: $\n?
+          pop: true

@@ -1,0 +1,19 @@
+#! SYNTAX TEST "Packages/Unicon/Unicon.sublime-syntax"
+
+   i := 2
+#!   ^^    keyword.operator
+#!      ^  constant.numeric
+   i +:= 1
+#!   ^^^    keyword.operator
+#!       ^  constant.numeric
+
+   j := i + (33 ^ 2) - (2 * 3)
+#!   ^^                          keyword.operator
+#!        ^                      keyword.operator
+#!              ^                keyword.operator
+#!                   ^           keyword.operator
+#!                        ^      keyword.operator
+#!           ^^                  constant.numeric
+#!                ^              constant.numeric
+#!                      ^        constant.numeric
+#!                          ^    constant.numeric

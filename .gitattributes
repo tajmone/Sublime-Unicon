@@ -1,0 +1,41 @@
+###############################################
+#  Unicon support for Sublime Text 4:         #
+#  https://github.com/tajmone/Sublime-Unicon  #
+###############################################
+* text=auto
+
+*.icn   text eol=lf  linguist-language=Unicon
+
+*.sublime-*   text
+
+## Repository Configuration
+###########################
+.editorconfig    text eol=lf
+.gitlab-ci.yml   text eol=lf
+.travis.yml      text eol=lf
+.gitattributes   text eol=lf
+.gitconfig       text eol=lf
+.gitignore       text eol=lf
+.gitmodules      text eol=lf
+
+## Documentation Files
+######################
+*.md      text
+*.txt     text
+LICENSE   text
+
+## Scripts
+##########
+*.sh   text eol=lf
+*.py   text
+
+
+## Contents to Exclude from Package
+###################################
+
+*.sh export-ignore
+.editorconfig export-ignore
+.travis.yml export-ignore
+/tests/**/*.* export-ignore
+
+# EOF #

@@ -1,0 +1,11 @@
+#! SYNTAX TEST "Packages/Unicon/Unicon.sublime-syntax"
+
+# a comment
+#!<-         punctuation.definition.comment
+#!<-         comment.line.number-sign
+#!^^^^^^^^^  comment.line.number-sign
+
+   write("hello, world") # comment
+#!                       ^          punctuation.definition.comment
+#!                       ^^^^^^^^^  comment.line.number-sign
+#!   ^^^^^^^^^^^^^^^^^^^^          -comment.line.number-sign

@@ -1,0 +1,110 @@
+#! SYNTAX TEST "Packages/Unicon/Unicon.sublime-syntax"
+
+
+   "a string"
+#! ^^^^^^^^^^  string.quoted.double
+#! ^           punctuation.definition.string.begin
+#!          ^  punctuation.definition.string.end
+
+## Hex Escapes
+##############
+
+   "xx\x00xx"
+#! ^^^^^^^^^^   string.quoted.double
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+   "xx\xFfxx"
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+   "xx\xGgxx"
+#!    ^^        constant.character.escape
+#!  ^^         -constant.character.escape
+#!      ^^^^   -constant.character.escape
+
+## Octal Escapes
+################
+
+   "xx\000xx"
+#! ^^^^^^^^^^   string.quoted.double
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+   "xx\777xx"
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+   "xx\888xx"
+#!    ^^        constant.character.escape
+#!  ^^         -constant.character.escape
+#!      ^^^^   -constant.character.escape
+
+## Control Chars Escapes
+########################
+
+   "xx\^cxx"
+#! ^^^^^^^^^   string.quoted.double
+#!    ^^^      constant.character.escape
+#!  ^^        -constant.character.escape
+#!       ^^   -constant.character.escape
+   "xx\^zxx"
+#!    ^^^      constant.character.escape
+#!  ^^        -constant.character.escape
+#!       ^^   -constant.character.escape
+   "xx\^Axx"
+#!    ^^        constant.character.escape
+#!  ^^         -constant.character.escape
+#!      ^^^^   -constant.character.escape
+
+## Single Char Escapes
+######################
+
+   "xx\bxx"
+#! ^^^^^^^^   string.quoted.double
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\dxx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\exx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\fxx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\lxx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\nxx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\rxx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\txx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\vxx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\"xx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   "xx\'xx"
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape

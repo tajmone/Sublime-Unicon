@@ -1,0 +1,111 @@
+#! SYNTAX TEST "Packages/Unicon/Unicon.sublime-syntax"
+
+
+   'abcdefgh'
+#! ^^^^^^^^^^  string.quoted.single
+#! ^           punctuation.definition.string.begin
+#!          ^  punctuation.definition.string.end
+
+## Hex Escapes
+##############
+
+   'ab\x00cd'
+#! ^^^^^^^^^^   string.quoted.single
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+   'ab\xFfcd'
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+   'ab\xGgcd'
+#!    ^^        constant.character.escape
+#!  ^^         -constant.character.escape
+#!      ^^^^   -constant.character.escape
+
+## Octal Escapes
+################
+
+   'ab\000cd'
+#! ^^^^^^^^^^   string.quoted.single
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+
+   'ab\777cd'
+#!    ^^^^      constant.character.escape
+#!  ^^         -constant.character.escape
+#!        ^^   -constant.character.escape
+   'ab\888cd'
+#!    ^^        constant.character.escape
+#!  ^^         -constant.character.escape
+#!      ^^^^   -constant.character.escape
+
+## Control Chars Escapes
+########################
+
+   'ab\^ccd'
+#! ^^^^^^^^^   string.quoted.single
+#!    ^^^      constant.character.escape
+#!  ^^        -constant.character.escape
+#!       ^^   -constant.character.escape
+   'ab\^zcd'
+#!    ^^^      constant.character.escape
+#!  ^^        -constant.character.escape
+#!       ^^   -constant.character.escape
+   'ab\^Acd'
+#!    ^^        constant.character.escape
+#!  ^^         -constant.character.escape
+#!      ^^^^   -constant.character.escape
+
+## Single Char Escapes
+######################
+
+   'ab\bcd'
+#! ^^^^^^^^   string.quoted.single
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\dcd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\ecd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\fcd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\lcd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\ncd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\rcd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\tcd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\vcd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\"cd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape
+   'ab\'cd'
+#!    ^^      constant.character.escape
+#!  ^^       -constant.character.escape
+#!      ^^   -constant.character.escape

@@ -1,0 +1,283 @@
+#! SYNTAX TEST "Packages/Unicon/Unicon.sublime-syntax"
+
+   abstract
+#! ^^^^^^^^ keyword.control
+   all
+#! ^^^ keyword.control
+   break
+#! ^^^^^ keyword.control
+   by
+#! ^^ keyword.control
+   case
+#! ^^^^ keyword.control
+   class
+#! ^^^^^ keyword.control
+   create
+#! ^^^^^^ keyword.control
+   critical
+#! ^^^^^^^^ keyword.control
+   default
+#! ^^^^^^^ keyword.control
+   do
+#! ^^ keyword.control
+   else
+#! ^^^^ keyword.control
+   end
+#! ^^^ keyword.control
+   every
+#! ^^^^^ keyword.control
+   fail
+#! ^^^^ keyword.control
+   global
+#! ^^^^^^ keyword.control
+   if
+#! ^^ keyword.control
+   import
+#! ^^^^^^ keyword.control
+   initial
+#! ^^^^^^^ keyword.control
+   initially
+#! ^^^^^^^^^ keyword.control
+   invocable
+#! ^^^^^^^^^ keyword.control
+   link
+#! ^^^^ keyword.control
+   local
+#! ^^^^^ keyword.control
+   method
+#! ^^^^^^ keyword.control
+   next
+#! ^^^^ keyword.control
+   not
+#! ^^^ keyword.control
+   of
+#! ^^ keyword.control
+   package
+#! ^^^^^^^ keyword.control
+   procedure
+#! ^^^^^^^^^ keyword.control
+   record
+#! ^^^^^^ keyword.control
+   repeat
+#! ^^^^^^ keyword.control
+   return
+   static
+#! ^^^^^^ keyword.control
+   suspend
+#! ^^^^^^^ keyword.control
+   then
+#! ^^^^ keyword.control
+   thread
+#! ^^^^^^ keyword.control
+   to
+#! ^^ keyword.control
+   type
+#! ^^^^ keyword.control
+   until
+#! ^^^^^ keyword.control
+   while
+#! ^^^^^ keyword.control
+   write
+#! ^^^^^ keyword.control
+
+   &allocated
+#! ^^^^^^^^^^ keyword.control
+#! ^          punctuation.definition.keyword
+   &ascii
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &clock
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &col
+#! ^^^^ keyword.control
+#! ^    punctuation.definition.keyword
+   &collections
+#! ^^^^^^^^^^^^ keyword.control
+#! ^            punctuation.definition.keyword
+   &column
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &control
+#! ^^^^^^^^ keyword.control
+#! ^        punctuation.definition.keyword
+   &cset
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &current
+#! ^^^^^^^^ keyword.control
+#! ^        punctuation.definition.keyword
+   &date
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &dateline
+#! ^^^^^^^^^ keyword.control
+#! ^         punctuation.definition.keyword
+   &digits
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &dump
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &e
+#! ^^ keyword.control
+#! ^  punctuation.definition.keyword
+   &errno
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &error
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &errornumber
+#! ^^^^^^^^^^^^ keyword.control
+#! ^            punctuation.definition.keyword
+   &errortext
+#! ^^^^^^^^^^ keyword.control
+#! ^          punctuation.definition.keyword
+   &errorvalue
+#! ^^^^^^^^^^^ keyword.control
+#! ^           punctuation.definition.keyword
+   &errout
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &eventcode
+#! ^^^^^^^^^^ keyword.control
+#! ^          punctuation.definition.keyword
+   &eventsource
+#! ^^^^^^^^^^^^ keyword.control
+#! ^            punctuation.definition.keyword
+   &eventvalue
+#! ^^^^^^^^^^^ keyword.control
+#! ^           punctuation.definition.keyword
+   &fail
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &features
+#! ^^^^^^^^^ keyword.control
+#! ^         punctuation.definition.keyword
+   &file
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &host
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &input
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &interval
+#! ^^^^^^^^^ keyword.control
+#! ^         punctuation.definition.keyword
+   &lcase
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &ldrag
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &letters
+#! ^^^^^^^^ keyword.control
+#! ^        punctuation.definition.keyword
+   &level
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &line
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &lpress
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &lrelease
+#! ^^^^^^^^^ keyword.control
+#! ^         punctuation.definition.keyword
+   &main
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &mdrag
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &meta
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &mpress
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &mrelease
+#! ^^^^^^^^^ keyword.control
+#! ^         punctuation.definition.keyword
+   &now
+#! ^^^^ keyword.control
+#! ^    punctuation.definition.keyword
+   &null
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &output
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &phi
+#! ^^^^ keyword.control
+#! ^    punctuation.definition.keyword
+   &pi
+#! ^^^ keyword.control
+#! ^   punctuation.definition.keyword
+   &pick
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &pos
+#! ^^^^ keyword.control
+#! ^    punctuation.definition.keyword
+   &progname
+#! ^^^^^^^^^ keyword.control
+#! ^         punctuation.definition.keyword
+   &random
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &rdrag
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &regions
+#! ^^^^^^^^ keyword.control
+#! ^        punctuation.definition.keyword
+   &resize
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &row
+#! ^^^^ keyword.control
+#! ^    punctuation.definition.keyword
+   &rpress
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &rrelease
+#! ^^^^^^^^^ keyword.control
+#! ^         punctuation.definition.keyword
+   &shift
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &source
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &storage
+#! ^^^^^^^^ keyword.control
+#! ^        punctuation.definition.keyword
+   &subject
+#! ^^^^^^^^ keyword.control
+#! ^        punctuation.definition.keyword
+   &time
+#! ^^^^^ keyword.control
+#! ^     punctuation.definition.keyword
+   &trace
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &ucase
+#! ^^^^^^ keyword.control
+#! ^      punctuation.definition.keyword
+   &version
+#! ^^^^^^^^ keyword.control
+#! ^        punctuation.definition.keyword
+   &window
+#! ^^^^^^^ keyword.control
+#! ^       punctuation.definition.keyword
+   &x
+#! ^^ keyword.control
+#! ^  punctuation.definition.keyword
+   &y
+#! ^^ keyword.control
+#! ^  punctuation.definition.keyword
